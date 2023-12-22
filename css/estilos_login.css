@@ -1,0 +1,23 @@
+body {
+    background-color: #808080; /* Color de fondo gris */
+}
+.container {
+    margin-top: 50px;
+}
+.panel-heading {
+    text-align: center;
+}
+.panel-body {
+    text-align: center;
+}
+label {
+    text-align: left;
+}
+#entrarSistema, .btn-danger {
+    display: block;
+    margin: 10px auto;
+}
+.panel img {
+    margin: 0 auto; /* Centrar la imagen */
+    display: block;
+}
