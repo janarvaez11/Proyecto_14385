@@ -7,3 +7,9 @@
 7.- librerias: contendra librerias para la cracion de pdf, jquery, alertify, bootstrap y select 2
 procesos: contiene archivos intermedios entre las clases y las vistas, estos mandaran informacion entre una y otra cosa
 vistas: contendra todas las vistas de cada uno de los modulos 
+
+
+inf.
+Colores : background-color: #2e3239
+                <div class="panel panel-primary" style="border-color:#2e3239; border-radius: 5px">
+                    <div class="panel panel-heading" style="background-color: #5f7adb">
