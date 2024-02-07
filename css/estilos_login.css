@@ -1,10 +1,23 @@
-.panel-heading {
-    text-align: center;
-    background-color: #5f7adb;
+body {
+    background-color: withe;
+    /* Fondo gris */
+}
+
+.container {
+    margin-top: 50px;
 }
 
 .panel {
-    border-color: #5f7adb;
+    border: 1px solid #000;
+}
+
+
+.btn {
+    border: 1px solid #000;
+}
+
+.panel-heading {
+    text-align: center;
 }
 
 .panel-body {
@@ -16,21 +29,14 @@ label {
 }
 
 #entrarSistema,
-.btn-danger {
+.btn-default {
     display: block;
     margin: 10px auto;
 }
 
-.panel img {
-    margin: 0 auto;
-    /* Centrar la imagen */
+.btn-danger {
     display: block;
-}
-
-.logo {
-    width: 100%;
-    height: 100px;
-    margin-bottom: 25px;
+    margin: 10px auto;
 }
 
 .btn-primaryy {

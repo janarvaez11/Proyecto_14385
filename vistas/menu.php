@@ -12,7 +12,7 @@
     <!-- Begin Navbar -->
     <div id="nav">
         <div class="navbar navbar-inverse navbar-fixed-top" data-spy="affix" data-offset-top="100"
-            style="background-color: #5f7adb ;">
+            style="background-color: #000 ;">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -48,14 +48,14 @@
 
 
                         <?php
-            if ($_SESSION['usuario'] == "admin"):
-              ?>
-                        <li><a href="usuarios.php"><span class="glyphicon glyphicon-user"></span> Administrar
-                                usuarios</a>
-                        </li>
-                        <?php
-            endif;
-            ?>
+                        if ($_SESSION['usuario'] == "admin"):
+                            ?>
+                            <li><a href="usuarios.php"><span class="glyphicon glyphicon-user"></span> Administrar
+                                    usuarios</a>
+                            </li>
+                            <?php
+                        endif;
+                        ?>
 
 
                         <li><a href="clientes.php"><span class="glyphicon glyphicon-user"></span> Clientes</a>
@@ -100,12 +100,12 @@
 </html>
 
 <script type="text/javascript">
-$(window).scroll(function() {
-    if ($(document).scrollTop() > 150) {
-        $('.logo').height(200);
+    $(window).scroll(function () {
+        if ($(document).scrollTop() > 150) {
+            $('.logo').height(200);
 
-    } else {
-        $('.logo').height(100);
-    }
-});
+        } else {
+            $('.logo').height(100);
+        }
+    });
 </script>
