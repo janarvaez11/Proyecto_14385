@@ -8,7 +8,7 @@ $sql = "SELECT * from usuarios where email='admin'";
 $result = mysqli_query($conexion, $sql);
 $validar = 0;
 if (mysqli_num_rows($result) > 0) {
-	$validar = 1;
+    $validar = 1;
 }
 ?>
 
@@ -31,12 +31,12 @@ if (mysqli_num_rows($result) > 0) {
         <div class="row">
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
-                <div class="panel">
+                <div class="panel  panel-succesful">
                     <div class="panel-heading">
                         <img class="logo" src="img/logo_new.png">
                     </div>
                     <div class="panel-body">
-                        <p>Sistema de ventas y almacen</p>
+                        <p><strong>Sistema de ventas y almacen</strong></p>
 
                         <form id="frmLogin">
                             <!-- <label>Usuario</label> -->
@@ -46,9 +46,9 @@ if (mysqli_num_rows($result) > 0) {
                             <!-- <label>Password</label> -->
                             <input type="password" name="password" id="password" class="form-control input-sm"
                                 placeholder="Contraseña">
-                            <span class="btn btn-primaryy btn-sm" id="entrarSistema">Entrar</span>
+                            <span class="btn" id="entrarSistema"><strong>Entrar</strong></span>
                             <?php if (!$validar): ?>
-                            <a href="registro.php" class="btn btn-danger btn-sm">Registrar</a>
+                                <a href="registro.php" class="btn btn-default btn-sm">Registrar</a>
                             <?php endif; ?>
                         </form>
                     </div>
@@ -63,30 +63,30 @@ if (mysqli_num_rows($result) > 0) {
 
 
 <script type="text/javascript">
-$(document).ready(function() {
-    $('#entrarSistema').click(function() {
+    $(document).ready(function () {
+        $('#entrarSistema').click(function () {
 
-        vacios = validarFormVacio('frmLogin');
+            vacios = validarFormVacio('frmLogin');
 
-        if (vacios > 0) {
-            alert("Debes llenar todos los campos!!");
-            return false;
-        }
-
-        datos = $('#frmLogin').serialize();
-        $.ajax({
-            type: "POST",
-            data: datos,
-            url: "procesos/regLogin/login.php",
-            success: function(r) {
-
-                if (r == 1) {
-                    window.location = "vistas/inicio.php";
-                } else {
-                    alert("No se pudo acceder :(");
-                }
+            if (vacios > 0) {
+                alert("Debes llenar todos los campos!!");
+                return false;
             }
+
+            datos = $('#frmLogin').serialize();
+            $.ajax({
+                type: "POST",
+                data: datos,
+                url: "procesos/regLogin/login.php",
+                success: function (r) {
+
+                    if (r == 1) {
+                        window.location = "vistas/inicio.php";
+                    } else {
+                        alert("No se pudo acceder :(");
+                    }
+                }
+            });
         });
     });
-});
 </script>
